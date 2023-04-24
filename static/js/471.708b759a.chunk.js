@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdiagnal=self.webpackChunkdiagnal||[]).push([[471],{4471:function(a,e,s){s.r(e);var l=s(184);e.default=function(a){var e=a.name,s=a["poster-image"];return(0,l.jsxs)("div",{className:"flex flex-col w-full h-full px-[15px] py-[45px]",children:[(0,l.jsx)("img",{src:"/assets/images/".concat(s),alt:""}),(0,l.jsx)("div",{className:"pt-6 text-[28px]",children:e})]})}}}]);
-//# sourceMappingURL=471.708b759a.chunk.js.map
