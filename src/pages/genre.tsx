@@ -18,16 +18,16 @@ const Genre = () =>{
 
     const getData = useCallback(async()=>{
         if(!contentdata.page["page-num-requested"]) {
-            dispatch(await loadData("page1"))
+            dispatch(await loadData("PAGE1"))
         }
         if(contentdata.page["page-num-requested"] === "1"){
-            dispatch(await loadData("page2"))
+            dispatch(await loadData("PAGE2"))
         }
         else if(contentdata.page["page-num-requested"] === "2"){
-            dispatch(await loadData("page3"))
+            dispatch(await loadData("PAGE3"))
         }
         setScrollLoad(false)
-    },[contentdata, dispatch])
+    },[contentdata,dispatch])
 
     useEffect(()=>{
         getData()
@@ -46,7 +46,7 @@ const Genre = () =>{
 
     const loadMore = () => {
         if(document.scrollingElement){
-            if (window.innerHeight + document.documentElement.scrollTop - 100 === document.scrollingElement.scrollHeight-100) {
+            if (window.innerHeight + document.documentElement.scrollTop > document.scrollingElement.scrollHeight - 100) {
                 setScrollLoad(true)
             }
         }

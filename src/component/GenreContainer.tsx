@@ -9,10 +9,10 @@ const GenreContainer = (props:{contentList:IContent[], scrollRef:React.RefObject
     <Suspense fallback={<div>Loading</div>}>
         <div 
         ref={scrollRef} 
-        className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mb-4">
+        className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 mb-4">
           {contentList.filter((content)=>content.name
               .toLocaleLowerCase().includes(searchKey))
-              .map((content:IContent)=> <GenreTile {...content}/>)}
+              .map((content:IContent,index:number)=> <GenreTile key={index} {...content}/>)}
         </div>
      </Suspense>
     )
